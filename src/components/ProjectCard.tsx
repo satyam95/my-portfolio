@@ -29,12 +29,13 @@ const ProjectCard = ({
   return (
     <div className="flex flex-col gap-4">
       <Link href={extLink ? extLink : `/work/${link}`}>
-        <div className="relative h-[246px] md:h-[269px] w-full md:w-[430px] rounded-sm bg-[#f2f2f2] p-4 md:px-3 md:py-4">
+        <div className="relative h-[235px] md:h-[269px] w-full md:w-[430px] rounded-sm bg-[#f2f2f2] p-2 md:px-3 md:py-4">
           <div className="relative h-full w-full rounded-sm shadow-xl transition-shadow duration-700 ease-in-out hover:shadow-none">
             <Image
               src={image}
               alt={alt}
               fill
+              sizes="(max-width: 768px) 100vw, 430px"
               className="object-cover rounded-sm"
             />
           </div>
