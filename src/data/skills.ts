@@ -1,0 +1,17 @@
+export const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "React Native",
+  "React Testing Library",
+  "Tailwind CSS",
+  "Material UI",
+  "Figma",
+  "Adobe XD",
+  "WordPress",
+  "GitHub",
+  "Jest",
+];
