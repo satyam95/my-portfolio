@@ -1,7 +1,7 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
 import { PlaygroundProjects } from "@/data/playgrounds";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 const PlaygroundClient = () => {
   const [displayedProjects, setDisplayedProjects] = useState(
@@ -11,39 +11,33 @@ const PlaygroundClient = () => {
   const [isLoading, setIsLoading] = useState(false);
   const projectsPerPage = 6;
 
-  // Function to load more projects
-  const loadMoreProjects = () => {
-    if (displayedProjects.length >= PlaygroundProjects.length || isLoading)
-      return;
-
-    setIsLoading(true);
-    // Simulate a slight delay to show loading state (optional, remove if data is instant)
-    setTimeout(() => {
-      const nextProjects = PlaygroundProjects.slice(
-        0,
-        (page + 1) * projectsPerPage
-      );
-      setDisplayedProjects(nextProjects);
-      setPage(page + 1);
-      setIsLoading(false);
-    }, 500); // 500ms delay to simulate loading
-  };
-
-  // Function to handle scroll event
-  const handleScroll = () => {
+  // Memoize handleScroll to prevent unnecessary re-creation
+  const handleScroll = useCallback(() => {
     if (
       window.innerHeight + document.documentElement.scrollTop >=
       document.documentElement.offsetHeight - 300
     ) {
-      loadMoreProjects();
+      if (displayedProjects.length >= PlaygroundProjects.length || isLoading)
+        return;
+
+      setIsLoading(true);
+      setTimeout(() => {
+        const nextProjects = PlaygroundProjects.slice(
+          0,
+          (page + 1) * projectsPerPage
+        );
+        setDisplayedProjects(nextProjects);
+        setPage(page + 1);
+        setIsLoading(false);
+      }, 500);
     }
-  };
+  }, [page, displayedProjects, isLoading]); // Dependencies for handleScroll
 
   // Set up scroll event listener
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
-  }, [page, displayedProjects, isLoading]);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+  }, [handleScroll]); // Include handleScroll in the dependency array
 
   return (
     <div className="pb-16 pt-6 md:pb-20 md:pt-10 px-4 md:px-8 lg:px-0">
@@ -53,8 +47,8 @@ const PlaygroundClient = () => {
             Miscellaneous projects
           </h2>
           <p className="text-[#757575] text-xl md:text-2xl font-medium">
-            Here's some of my little silly projects, sometimes I design out of
-            fun.
+            Here&apos;s some of my little silly projects, sometimes I design out
+            of fun.
           </p>
         </div>
         <div className="flex flex-col md:flex-row flex-wrap md:justify-center lg:justify-between gap-12 lg:gap-5 lg:gap-y-5">
@@ -74,7 +68,20 @@ const PlaygroundClient = () => {
             className={`py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] mx-auto max-w-fit shadow-lg/30 md:shadow-xl/30 transition-colors duration-200 ${
               isLoading ? "bg-gray-600 cursor-not-allowed" : "bg-black"
             }`}
-            onClick={loadMoreProjects}
+            onClick={() => {
+              if (!isLoading) {
+                setIsLoading(true);
+                setTimeout(() => {
+                  const nextProjects = PlaygroundProjects.slice(
+                    0,
+                    (page + 1) * projectsPerPage
+                  );
+                  setDisplayedProjects(nextProjects);
+                  setPage(page + 1);
+                  setIsLoading(false);
+                }, 500);
+              }
+            }}
             disabled={isLoading}
           >
             {isLoading ? "Loading..." : "Show More"}

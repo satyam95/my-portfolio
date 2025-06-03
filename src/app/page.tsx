@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Figma, Dribbble, File, Linkedin, Github } from "lucide-react";
+import { File, Linkedin, Github } from "lucide-react";
 import Link from "next/link";
 import ExperienceCard from "@/components/ExperienceCard";
 import SkillBadge from "@/components/SkillBadge";

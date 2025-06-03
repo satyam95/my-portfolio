@@ -1,11 +1,9 @@
 import { getSingleBlog } from "@/utils/mdx";
 import { redirect } from "next/navigation";
 
-interface SingleBlogPageProps {
-  params: { slug: string };
-}
+type Params = Promise<{ slug: string }>;
 
-export default async function SingleBlogPage({ params }: SingleBlogPageProps) {
+export default async function SingleBlogPage({ params }: { params: Params }) {
   const { slug } = await params;
   const blog = await getSingleBlog(slug);
 
