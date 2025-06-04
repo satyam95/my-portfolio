@@ -9,7 +9,8 @@ export const projects: Project[] = [
     image: "/donut/donut_main.jpg",
     alt: "donut component library thumbnail",
     subtitle: "Component Library",
-    description: "A modular and customizable React component library designed to streamline UI development with reusable, accessible, and visually consistent components.",
+    description:
+      "A modular and customizable React component library designed to streamline UI development with reusable, accessible, and visually consistent components.",
     skills: [
       { icon: "/skills-colored/react.svg", name: "react.js" },
       { icon: "/skills-colored/typescript.svg", name: "typescript" },
@@ -58,6 +59,55 @@ export const projects: Project[] = [
       {
         text: "Coverage Report",
         link: "https://donut-coverage-report.vercel.app/",
+      },
+    ],
+  },
+  {
+    slug: "wp-ecom",
+    title: "Store: Next.js Ecommerce using Wordpress as Backend",
+    image: "/ecom/ecom_main.jpg",
+    alt: "next.js ecommerce website thumbnail",
+    subtitle: "Next.js App",
+    description:
+      "Store: A Next.js e-commerce platform seamlessly integrated with WordPress as the backend for content and product management.",
+    skills: [
+      { icon: "/skills-colored/nextjs.svg", name: "next.js" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/tailwind.svg", name: "tailwind" },
+      { icon: "/skills-colored/graphql.svg", name: "graphql" },
+      { icon: "/skills-colored/woographql.png", name: "woographql" },
+      { icon: "/skills-colored/wordpress.png", name: "wordpress" },
+    ],
+    skillsExtended: [
+      { icon: "/skills-colored/html.svg", name: "html" },
+      { icon: "/skills-colored/css.svg", name: "css" },
+      { icon: "/skills-colored/react.svg", name: "react.js" },
+      { icon: "/skills-colored/nextjs.svg", name: "next.js" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/tailwind.svg", name: "tailwind" },
+      { icon: "/skills-colored/graphql.svg", name: "graphql" },
+      { icon: "/skills-colored/woographql.png", name: "woographql" },
+      { icon: "/skills-colored/wordpress.png", name: "wordpress" },
+    ],
+    images: [
+      "/ecom/ecom_main.jpg",
+      "/ecom/ecom_1.jpg",
+      "/ecom/ecom_2.jpg",
+      "/ecom/ecom_3.jpg",
+      "/ecom/ecom_4.jpg",
+      "/ecom/ecom_5.jpg",
+      "/ecom/ecom_6.jpg",
+      "/ecom/ecom_7.jpg",
+      "/ecom/ecom_8.jpg",
+    ],
+    externalLinks: [
+      {
+        text: "Github (Source Code)",
+        link: "https://github.com/satyam95/wp-next-ecommerce",
+      },
+      {
+        text: "Live Preview",
+        link: "https://wp-next-ecommerce.vercel.app/",
       },
     ],
   },

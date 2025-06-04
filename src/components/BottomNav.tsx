@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { Link } from 'next-view-transitions'
+import { Link } from "next-view-transitions";
 
 const BottomNav = () => {
   const pathname = usePathname();

@@ -51,7 +51,7 @@ const PlaygroundClient = () => {
             of fun.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row flex-wrap md:justify-center lg:justify-between gap-12 lg:gap-5 lg:gap-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {displayedProjects.map((project, idx) => (
             <ProjectCard
               key={idx}

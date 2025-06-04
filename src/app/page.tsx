@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { File, Linkedin, Github } from "lucide-react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import ExperienceCard from "@/components/ExperienceCard";
 import SkillBadge from "@/components/SkillBadge";
 import ProjectCard from "@/components/ProjectCard";
@@ -75,7 +75,7 @@ export default function Home() {
             My Work
           </h2>
           <div className="flex flex-col gap-12">
-            <div className="flex flex-col md:flex-row flex-wrap md:justify-center lg:justify-between gap-12 lg:gap-5 lg:gap-y-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               {projects.map((project, idx) => (
                 <ProjectCard
                   key={idx}

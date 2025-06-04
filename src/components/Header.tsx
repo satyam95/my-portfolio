@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Image from "next/image";
+import { Link } from "next-view-transitions";
 import React from "react";
 
 const Header = () => {
@@ -6,7 +7,9 @@ const Header = () => {
     <div className="max-w-[900px] mx-auto px-4 md:px-8 lg:px-0">
       <div className="flex justify-between items-center py-4 md:py-8">
         <div className="font-semibold text-2xl">
-          <Link href="/">Satyam</Link>
+          <Link href="/">
+            <Image src="/s.png" alt="main logo" width={50} height={50} />
+          </Link>
         </div>
         <button className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit shadow-lg/30 md:shadow-xl/30">
           Contact

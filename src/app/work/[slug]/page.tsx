@@ -6,11 +6,13 @@ import { notFound } from "next/navigation";
 
 type Params = Promise<{ slug: string }>;
 
-export default async function SingleProjectPage({ params }: { params: Params }) {
+export default async function SingleProjectPage({
+  params,
+}: {
+  params: Params;
+}) {
   const { slug } = await params;
-  const project: Project | undefined = projects.find(
-    (p) => p.slug === slug
-  );
+  const project: Project | undefined = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -25,7 +27,7 @@ export default async function SingleProjectPage({ params }: { params: Params }) 
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">{project.title}</h2>
         </div>
-        <p className="text-sm text-[#757575]">{project.description}</p>
+        <p className="text-base text-[#757575]">{project.description}</p>
         <div className="flex flex-col gap-6 md:gap-6 md:flex-row justify-between">
           <div className="flex flex-col gap-1">
             <p className="text-sm text-[#757575]">Techstack</p>
@@ -55,15 +57,14 @@ export default async function SingleProjectPage({ params }: { params: Params }) 
           {project.images.map((url, idx) => (
             <div
               key={idx}
-              className="relative h-[228px] md:h-[506px] w-full md:w-[900px] rounded-sm bg-[#f2f2f2] shadow-md p-2 md:px-13 md:py-5"
+              className="relative h-[232px] md:h-[536px] w-full md:w-[900px] rounded-sm bg-[#f2f2f2] shadow-md p-2 md:px-6 md:py-5"
             >
-              <div className="relative h-full w-full rounded-sm shadow-xl/30 transition-shadow duration-700 ease-in-out hover:shadow-none">
+              <div className="relative h-full w-full rounded-sm shadow-md/30 md:shadow-xl/30 transition-shadow duration-700 ease-in-out hover:shadow-none">
                 <Image
                   src={url}
                   alt="image 1"
                   fill
-                  sizes="(max-width: 768px) 100vw, 430px"
-                  className="md:object-cover rounded-sm"
+                  className="md:object-cover rounded-md"
                 />
               </div>
             </div>

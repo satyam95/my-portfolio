@@ -23,7 +23,7 @@ const MiniProjectCard = ({
         <h3 className="font-semibold text-xl md:text-2xl">{title}</h3>
         <p className="text-[#666] text-sm leading-[21px]">{description}</p>
       </div>
-      <Link href={link}>
+      <Link href={link} target="_blank">
         <div className="relative w-[200px] h-[154px]">
           <Image
             src={image}
