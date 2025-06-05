@@ -57,16 +57,14 @@ export default async function SingleProjectPage({
           {project.images.map((url, idx) => (
             <div
               key={idx}
-              className="relative h-[232px] md:h-[536px] w-full md:w-[900px] rounded-sm bg-[#f2f2f2] shadow-md p-2 md:px-6 md:py-5"
+              className="relative h-[229px] md:h-[411px] lg:h-[525px] w-full rounded-sm shadow-xl/30 transition-shadow duration-700 ease-in-out hover:shadow-none"
             >
-              <div className="relative h-full w-full rounded-sm shadow-md/30 md:shadow-xl/30 transition-shadow duration-700 ease-in-out hover:shadow-none">
-                <Image
-                  src={url}
-                  alt="image 1"
-                  fill
-                  className="md:object-cover rounded-md"
-                />
-              </div>
+              <Image
+                src={url}
+                alt="image 1"
+                fill
+                className="md:object-cover rounded-md"
+              />
             </div>
           ))}
         </div>

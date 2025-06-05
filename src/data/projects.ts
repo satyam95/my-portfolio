@@ -4,6 +4,47 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    slug: "invoice-generator",
+    title: "InvoiceGen: Create and Manage Invoices Easily",
+    image: "/invoice/invoice_main.jpg",
+    alt: "invoicegen thumbnail",
+    subtitle: "Fullstack App",
+    description:
+      "InvoiceGen: A simple, intuitive solution for creating, managing, and tracking professional invoices with ease.",
+    skills: [
+      { icon: "/skills-colored/nextjs.svg", name: "next.js" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/tailwind.svg", name: "tailwind" },
+      { icon: "/skills-colored/auth.webp", name: "auth" },
+      { icon: "/skills-colored/reactpdf.png", name: "react-pdf" },
+      { icon: "/skills-colored/drizzle.png", name: "drizzle" },
+      { icon: "/skills-colored/postgresql.png", name: "postgresql" },
+    ],
+    skillsExtended: [
+      { icon: "/skills-colored/html.svg", name: "html" },
+      { icon: "/skills-colored/css.svg", name: "css" },
+      { icon: "/skills-colored/nextjs.svg", name: "next.js" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/tailwind.svg", name: "tailwind" },
+      { icon: "/skills-colored/auth.webp", name: "auth" },
+      { icon: "/skills-colored/reactpdf.png", name: "react-pdf" },
+      { icon: "/skills-colored/drizzle.png", name: "drizzle" },
+      { icon: "/skills-colored/postgresql.png", name: "postgresql" },
+       {icon: "/skills-colored/neon.png", name: "neon" },
+    ],
+    images: ["/invoice/invoice_main.jpg", "/invoice/invoice_1.jpg"],
+    externalLinks: [
+      {
+        text: "Live Preview",
+        link: "https://invoice-generator-eight-sigma.vercel.app/",
+      },
+      {
+        text: "Github (Source Code)",
+        link: "https://github.com/satyam95/invoice-generator",
+      },
+    ],
+  },
+  {
     slug: "donut-component-library",
     title: "Donut UI: React Component Library",
     image: "/donut/donut_main.jpg",
@@ -102,12 +143,12 @@ export const projects: Project[] = [
     ],
     externalLinks: [
       {
-        text: "Github (Source Code)",
-        link: "https://github.com/satyam95/wp-next-ecommerce",
-      },
-      {
         text: "Live Preview",
         link: "https://wp-next-ecommerce.vercel.app/",
+      },
+      {
+        text: "Github (Source Code)",
+        link: "https://github.com/satyam95/wp-next-ecommerce",
       },
     ],
   },
