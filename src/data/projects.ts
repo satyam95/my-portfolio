@@ -185,9 +185,10 @@ export const projects: Project[] = [
     images: [
       "/stock/stock_main.jpg",
       "/stock/stock_1.jpg",
-      "/stock/stock_1.jpg",
-      "/stock/stock_1.jpg",
-      "/stock/stock_1.jpg",
+      "/stock/stock_2.jpg",
+      "/stock/stock_3.jpg",
+      "/stock/stock_4.jpg",
+      "/stock/stock_5.jpg",
     ],
     externalLinks: [
       {
