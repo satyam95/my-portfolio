@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ViewTransitions } from "next-view-transitions";
-
-export const metadata: Metadata = {
-  title: "Satyam Sagar",
-  description: "Portfolio website",
-};
 
 export default function RootLayout({
   children,

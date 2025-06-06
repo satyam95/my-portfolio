@@ -11,6 +11,12 @@ import MiniProjectCard from "@/components/MiniProjectCard";
 import { miniprojects } from "@/data/minprojects";
 import { blogs } from "@/data/blog";
 import BlogCard from "@/components/BlogCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Satyam Sagar",
+  description: "Portfolio website",
+};
 
 export default function Home() {
   return (
@@ -64,7 +70,10 @@ export default function Home() {
               such as Google, Figma, DaoHQ, Redxam and many others.
             </p>
           </div>
-          <Link href="" className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit shadow-lg/30 md:shadow-xl/30">
+          <Link
+            href=""
+            className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit shadow-lg/30 md:shadow-xl/30"
+          >
             Say Hi 👋
           </Link>
         </div>
@@ -76,7 +85,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-col gap-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              {projects.map((project, idx) => (
+              {projects.slice(0, 6).map((project, idx) => (
                 <ProjectCard
                   key={idx}
                   image={project.image}
