@@ -1,5 +1,3 @@
-// lib/projects.ts
-
 import { Project } from "@/types";
 
 export const projects: Project[] = [
@@ -30,7 +28,7 @@ export const projects: Project[] = [
       { icon: "/skills-colored/reactpdf.png", name: "react-pdf" },
       { icon: "/skills-colored/drizzle.png", name: "drizzle" },
       { icon: "/skills-colored/postgresql.png", name: "postgresql" },
-       {icon: "/skills-colored/neon.png", name: "neon" },
+      { icon: "/skills-colored/neon.png", name: "neon" },
     ],
     images: ["/invoice/invoice_main.jpg", "/invoice/invoice_1.jpg"],
     externalLinks: [
@@ -198,6 +196,80 @@ export const projects: Project[] = [
       {
         text: "Github (Source Code)",
         link: "https://github.com/satyam95/stock-dashboard",
+      },
+    ],
+  },
+  {
+    slug: "brainly",
+    title: "Brainly: Link sharing tool",
+    image: "/brain/brain_main.jpg",
+    alt: "brainly thumbnail",
+    subtitle: "MERN STACK",
+    description: "A web app that enable you to share you links.",
+    skills: [
+      { icon: "/skills-colored/node.png", name: "node" },
+      { icon: "/skills-colored/express.png", name: "express" },
+      { icon: "/skills-colored/mongo.svg", name: "mongodb" },
+      { icon: "/skills-colored/react.svg", name: "react.js" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/tailwind.svg", name: "tailwind" },
+      { icon: "/skills-colored/redux.svg", name: "redux" },
+    ],
+    skillsExtended: [
+      { icon: "/skills-colored/html.svg", name: "html" },
+      { icon: "/skills-colored/css.svg", name: "css" },
+      { icon: "/skills-colored/node.png", name: "node" },
+      { icon: "/skills-colored/express.png", name: "express" },
+      { icon: "/skills-colored/mongo.svg", name: "mongodb" },
+      { icon: "/skills-colored/react.svg", name: "react.js" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/tailwind.svg", name: "tailwind" },
+      { icon: "/skills-colored/redux.svg", name: "redux" },
+    ],
+    images: [
+      "/brain/brain_1.jpg",
+      "/brain/brain_2.jpg",
+      "/brain/brain_main.jpg",
+      "/brain/brain_3.jpg",
+      "/brain/brain_4.jpg",
+    ],
+    externalLinks: [
+      {
+        text: "Live Preview",
+        link: "https://brainly-l15f.vercel.app/",
+      },
+      {
+        text: "Github (Source Code)",
+        link: "https://github.com/satyam95/brainly",
+      },
+    ],
+  },
+  {
+    slug: "laundry-app",
+    title: "Laundry: React Native Expo App",
+    image: "/laundry/1.png",
+    alt: "laundry app thumbnail",
+    subtitle: "React Native App",
+    description: "A mobile app let you order laundry services.",
+    skills: [
+      { icon: "/skills-colored/expo.svg", name: "expo" },
+      { icon: "/skills-colored/react.svg", name: "react.js" },
+      { icon: "/skills-colored/firebase.svg", name: "firebase" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/redux.svg", name: "redux" },
+    ],
+    skillsExtended: [
+      { icon: "/skills-colored/expo.svg", name: "expo" },
+      { icon: "/skills-colored/react.svg", name: "react.js" },
+      { icon: "/skills-colored/firebase.svg", name: "firebase" },
+      { icon: "/skills-colored/typescript.svg", name: "typescript" },
+      { icon: "/skills-colored/redux.svg", name: "redux" },
+    ],
+    images: ["/laundry/1.png", "/laundry/2.png"],
+    externalLinks: [
+      {
+        text: "Github (Source Code)",
+        link: "https://github.com/satyam95/native-laundry",
       },
     ],
   },
