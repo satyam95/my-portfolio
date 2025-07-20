@@ -43,7 +43,7 @@ export default function Home() {
             </div>
             <div className="h-25 md:h-[127px] w-25 md:w-[127px] rounded-full bg-[#e6e6e64f] hover:scale-80 transition-transform duration-500 cursor-pointer">
               <Link
-                href=""
+                href="https://www.linkedin.com/in/satyamsagar95/"
                 target="_blank"
                 className="h-full w-full flex justify-center items-center"
               >
@@ -52,7 +52,7 @@ export default function Home() {
             </div>
             <div className="h-25 md:h-[127px] w-25 md:w-[127px] rounded-full bg-[#e6e6e64f] hover:scale-80 transition-transform duration-500 cursor-pointer">
               <Link
-                href=""
+                href="https://github.com/satyam95/"
                 target="_blank"
                 className="h-full w-full flex justify-center items-center"
               >

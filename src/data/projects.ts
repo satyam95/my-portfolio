@@ -34,7 +34,7 @@ export const projects: Project[] = [
     externalLinks: [
       {
         text: "Live Preview",
-        link: "https://invoice-generator-eight-sigma.vercel.app/",
+        link: "https://invg.vercel.app/",
       },
       {
         text: "Github (Source Code)",
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     externalLinks: [
       {
         text: "Live Preview",
-        link: "https://wp-next-ecommerce.vercel.app/",
+        link: "https://ecomkit.vercel.app/",
       },
       {
         text: "Github (Source Code)",
@@ -236,7 +236,7 @@ export const projects: Project[] = [
     externalLinks: [
       {
         text: "Live Preview",
-        link: "https://brainly-l15f.vercel.app/",
+        link: "https://brainsh.vercel.app/",
       },
       {
         text: "Github (Source Code)",
