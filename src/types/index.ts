@@ -22,7 +22,7 @@ export interface Project {
 }
 
 export interface PlaygroundProject {
-  link: string;
+  extLink: string;
   title: string;
   image: string;
   alt: string;

@@ -59,7 +59,7 @@ const PlaygroundClient = () => {
               alt={project.alt}
               subtitle={project.subtitle}
               title={project.title}
-              link={project.link}
+              extLink={project.extLink}
             />
           ))}
         </div>
