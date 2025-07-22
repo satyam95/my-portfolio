@@ -32,16 +32,21 @@ export default async function SingleProjectPage({
           <div className="flex flex-col gap-1">
             <p className="text-sm text-[#757575]">Techstack</p>
             <div className="flex items-center flex-wrap gap-2 md:gap-3">
-              {project.skillsExtended?.map((skill, idx) => (
-                <div key={idx} className="relative h-6 w-6">
-                  <Image src={skill.icon} alt={`${skill.name} icon`} fill />
+              {project.skillsExtended?.map((skill) => (
+                <div key={skill.name} className="relative h-6 w-6">
+                  <Image
+                    src={skill.icon}
+                    alt={`${skill.name} icon`}
+                    fill
+                    sizes="24px"
+                  />
                 </div>
               ))}
             </div>
           </div>
           <div className="flex flex-col gap-4 md:gap-3">
-            {project.externalLinks.map((item, idx) => (
-              <Link key={idx} href={item.link} target="_blank">
+            {project.externalLinks.map((item) => (
+              <Link key={item.link} href={item.link} target="_blank">
                 <div className="relative text-[#757575] text-sm flex justify-between items-center gap-2 cursor-pointer group max-w-[200px]">
                   {item.text}
                   <Image src="/link.svg" alt="link" width={18} height={18} />
@@ -56,12 +61,12 @@ export default async function SingleProjectPage({
         <div className="flex flex-col gap-10 md:gap-15">
           {project.images.map((url, idx) => (
             <div
-              key={idx}
+              key={url}
               className="relative h-[229px] md:h-[411px] lg:h-[525px] w-full rounded-sm shadow-xl/30 transition-shadow duration-700 ease-in-out hover:shadow-none"
             >
               <Image
                 src={url}
-                alt="image 1"
+                alt={`${project.title} screenshot ${idx + 1}`}
                 fill
                 className="md:object-cover rounded-md"
               />

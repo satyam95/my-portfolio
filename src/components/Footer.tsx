@@ -17,7 +17,7 @@ const Footer = () => {
               <Link href="https://x.com/satyamsagar30">
                 <div className="flex items-center gap-8 cursor-pointer">
                   <div className="w-20">
-                    <h4 className="text-[#8f8f8f] font-semibold text-base leading-[19px]">
+                    <h4 className="text-[#555] font-semibold text-base leading-[19px]">
                       x(twitter)
                     </h4>
                   </div>
@@ -36,7 +36,7 @@ const Footer = () => {
               <Link href="mailto:satyamsagar30@gmail.com">
                 <div className="flex items-center gap-8 cursor-pointer">
                   <div className="w-20">
-                    <h4 className="text-[#8f8f8f] font-semibold leading-[19px] text-base">
+                    <h4 className="text-[#555] font-semibold leading-[19px] text-base">
                       Email
                     </h4>
                   </div>
@@ -55,7 +55,7 @@ const Footer = () => {
               <Link href="https://www.linkedin.com/in/satyamsagar95/">
                 <div className="flex items-center gap-8 cursor-pointer">
                   <div className="w-20">
-                    <h4 className="text-[#8f8f8f] font-semibold text-base leading-[19px]">
+                    <h4 className="text-[#555] font-semibold text-base leading-[19px]">
                       LinkedIn
                     </h4>
                   </div>

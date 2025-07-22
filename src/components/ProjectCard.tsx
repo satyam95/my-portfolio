@@ -7,6 +7,16 @@ interface SkillItem {
   name: string;
 }
 
+/**
+ * ProjectCard displays a project with image, title, subtitle, and skills.
+ * @param image - Project image URL
+ * @param alt - Alt text for the image
+ * @param subtitle - Project subtitle
+ * @param title - Project title
+ * @param extLink - External link (optional)
+ * @param link - Internal link (optional)
+ * @param skills - Array of skills (optional)
+ */
 interface ProjectCardProps {
   image: string;
   alt: string;
@@ -48,9 +58,15 @@ const ProjectCard = ({
         </h3>
         {skills && (
           <div className="flex items-center gap-2 md:gap-2.5">
-            {skills.map((skill, idx) => (
-              <div key={idx} className="relative h-5 md:h-6 w-5 md:w-6">
-                <Image src={skill.icon} alt={`${skill.name} icon`} fill className="object-contain" />
+            {skills.map((skill) => (
+              <div key={skill.name} className="relative h-5 md:h-6 w-5 md:w-6">
+                <Image
+                  src={skill.icon}
+                  alt={`${skill.name} icon`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 20px, 24px"
+                />
               </div>
             ))}
           </div>

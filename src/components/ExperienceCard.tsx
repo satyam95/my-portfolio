@@ -25,6 +25,7 @@ const ExperienceCard = ({
             alt={`${company} company logo`}
             fill
             className="object-cover"
+             sizes="48px"
           />
         </div>
         <div className="flex flex-col gap-1.5 py-2">

@@ -15,7 +15,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Satyam Sagar",
-  description: "Portfolio website",
+  description:
+    "Portfolio of Satyam Sagar, Frontend Developer and UI Engineer. Explore my projects, work experience, skills, and articles on web development and UI design.",
 };
 
 export default function Home() {
@@ -30,13 +31,15 @@ export default function Home() {
                 alt="profile picture"
                 fill
                 className="rounded-full object-cover"
+                sizes="(max-width: 768px) 100px, 127px"
               />
             </div>
             <div className="h-25 md:h-[127px] w-25 md:w-[127px] rounded-full bg-[#e6e6e64f] hover:scale-80 transition-transform duration-500 cursor-pointer">
               <Link
-                href=""
+                href="mailto:satyamsagar30@gmail.com"
                 target="_blank"
                 className="h-full w-full flex justify-center items-center"
+                aria-label="Download Resume PDF"
               >
                 <File size={40} />
               </Link>
@@ -46,6 +49,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/satyamsagar95/"
                 target="_blank"
                 className="h-full w-full flex justify-center items-center"
+                aria-label="Visit Satyam Sagar's LinkedIn profile"
               >
                 <Linkedin size={40} />
               </Link>
@@ -55,6 +59,7 @@ export default function Home() {
                 href="https://github.com/satyam95/"
                 target="_blank"
                 className="h-full w-full flex justify-center items-center"
+                aria-label="Visit Satyam Sagar's GitHub profile"
               >
                 <Github size={40} />
               </Link>
@@ -71,8 +76,9 @@ export default function Home() {
             </p>
           </div>
           <Link
-            href=""
+            href="mailto:satyamsagar30@gmail.com"
             className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit shadow-lg/30 md:shadow-xl/30"
+            aria-label="Say Hi to Satyam Sagar via email"
           >
             Say Hi 👋
           </Link>
@@ -85,9 +91,9 @@ export default function Home() {
           </h2>
           <div className="flex flex-col gap-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              {projects.slice(0, 6).map((project, idx) => (
+              {projects.slice(0, 6).map((project) => (
                 <ProjectCard
-                  key={idx}
+                  key={project.slug}
                   image={project.image}
                   alt={project.alt}
                   subtitle={project.subtitle}
@@ -109,13 +115,13 @@ export default function Home() {
       <div className="border-[#2222220d] border-t py-16 md:py-20 px-4 md:px-8">
         <div className="flex flex-col md:flex-row gap-10 w-full">
           <div className="flex flex-col gap-5 md:w-1/2">
-            <p className="text-[#8f8f8f] text-base font-medium">
+            <p className="text-[#555] text-base font-medium">
               Work Experience
             </p>
             <div className="flex flex-col gap-6">
-              {experiences.map((experience, idx) => (
+              {experiences.map((experience) => (
                 <ExperienceCard
-                  key={idx}
+                  key={experience.company + experience.position}
                   logo={experience.logo}
                   company={experience.company}
                   position={experience.position}
@@ -126,7 +132,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-5 md:w-1/2">
-            <p className="text-[#8f8f8f] text-base font-medium">Skills</p>
+            <p className="text-[#555] text-base font-medium">Skills</p>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <SkillBadge key={skill} text={skill} />
@@ -138,18 +144,18 @@ export default function Home() {
       <div className="border-[#2222220d] border-t py-16 md:py-20 px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-10 w-full">
           <div className="flex flex-col gap-4 md:w-1/2">
-            <p className="text-[#8f8f8f] text-base font-medium">Articles</p>
-            {blogs.map((blog, idx) => (
-              <BlogCard key={idx} title={blog.title} slug={blog.slug} />
+            <p className="text-[#555] text-base font-medium">Articles</p>
+            {blogs.map((blog) => (
+              <BlogCard key={blog.slug} title={blog.title} slug={blog.slug} />
             ))}
           </div>
           <div className="flex flex-col gap-5 md:w-1/2">
-            <p className="text-[#8f8f8f] text-base font-medium">
+            <p className="text-[#555] text-base font-medium">
               Mini Projects
             </p>
-            {miniprojects.map((project, idx) => (
+            {miniprojects.map((project) => (
               <MiniProjectCard
-                key={idx}
+                key={project.title}
                 title={project.title}
                 description={project.description}
                 image={project.image}

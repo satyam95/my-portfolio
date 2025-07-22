@@ -30,6 +30,7 @@ const MiniProjectCard = ({
             alt={alt}
             fill
             className="object-cover rounded-md cursor-pointer shadow-xl/30"
+            sizes="200px"
           />
         </div>
       </Link>

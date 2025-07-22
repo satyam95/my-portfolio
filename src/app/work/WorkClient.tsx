@@ -1,39 +1,19 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
+import useInfiniteScroll from "@/utils/useInfiniteScroll";
 
 const WorkClient = () => {
-  const [displayedProjects, setDisplayedProjects] = useState(
-    projects.slice(0, 6)
-  );
-  const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-  const projectsPerPage = 6;
-
-  // Memoize handleScroll to prevent unnecessary re-creation
-  const handleScroll = useCallback(() => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop >=
-      document.documentElement.offsetHeight - 300
-    ) {
-      if (displayedProjects.length >= projects.length || isLoading) return;
-
-      setIsLoading(true);
-      setTimeout(() => {
-        const nextProjects = projects.slice(0, (page + 1) * projectsPerPage);
-        setDisplayedProjects(nextProjects);
-        setPage(page + 1);
-        setIsLoading(false);
-      }, 500);
-    }
-  }, [page, displayedProjects, isLoading]); // Dependencies for handleScroll
-
-  // Set up scroll event listener
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
-  }, [handleScroll]); // Include handleScroll in the dependency array
+  const {
+    displayedItems: displayedProjects,
+    isLoading,
+    showMore,
+    canShowMore,
+  } = useInfiniteScroll({
+    items: projects,
+    itemsPerPage: 6,
+  });
 
   return (
     <div className="pb-16 pt-6 md:pb-20 md:pt-10 px-4 md:px-8 lg:px-0">
@@ -45,9 +25,9 @@ const WorkClient = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {displayedProjects.map((project, idx) => (
+          {displayedProjects.map((project) => (
             <ProjectCard
-              key={idx}
+              key={project.slug}
               image={project.image}
               alt={project.alt}
               subtitle={project.subtitle}
@@ -57,25 +37,12 @@ const WorkClient = () => {
             />
           ))}
         </div>
-        {displayedProjects.length < projects.length && (
+        {canShowMore && (
           <button
             className={`py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] mx-auto max-w-fit shadow-lg/30 md:shadow-xl/30 transition-colors duration-200 ${
               isLoading ? "bg-gray-600 cursor-not-allowed" : "bg-black"
             }`}
-            onClick={() => {
-              if (!isLoading) {
-                setIsLoading(true);
-                setTimeout(() => {
-                  const nextProjects = projects.slice(
-                    0,
-                    (page + 1) * projectsPerPage
-                  );
-                  setDisplayedProjects(nextProjects);
-                  setPage(page + 1);
-                  setIsLoading(false);
-                }, 500);
-              }
-            }}
+            onClick={showMore}
             disabled={isLoading}
           >
             {isLoading ? "Loading..." : "Show More"}

@@ -24,6 +24,7 @@ const BottomNav = () => {
               className={`max-w-fit py-1.5 h-[42px] flex justify-center items-center rounded-full px-[18px] text-sm leading-5 font-medium cursor-pointer ${
                 pathname === item.path ? "bg-[#dbdbdb]" : ""
               }`}
+              aria-current={pathname === item.path ? "page" : undefined}
             >
               {item.label}
             </Link>
