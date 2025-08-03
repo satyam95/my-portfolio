@@ -11,9 +11,12 @@ const Header = () => {
             <Image src="/s.png" alt="main logo" width={50} height={50} />
           </Link>
         </div>
-        <button className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit shadow-lg/30 md:shadow-xl/30">
-          Contact
-        </button>
+        <Link
+          href="/#footercontact"
+          className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit cursor-pointer shadow-lg/30 md:shadow-xl/30"
+        >
+          Contact Me
+        </Link>
       </div>
     </div>
   );

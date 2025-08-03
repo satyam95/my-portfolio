@@ -9,7 +9,7 @@ const BottomNav = () => {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Work", path: "/work" },
-    { label: "Playground", path: "/playground" },
+    { label: "Tinker", path: "/tinker" },
     { label: "Contact", path: "/#footercontact" },
   ];
 

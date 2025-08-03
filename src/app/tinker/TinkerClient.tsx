@@ -4,7 +4,7 @@ import { PlaygroundProjects } from "@/data/playgrounds";
 import React from "react";
 import useInfiniteScroll from "@/utils/useInfiniteScroll";
 
-const PlaygroundClient = () => {
+const TinkerClient = () => {
   const {
     displayedItems: displayedProjects,
     isLoading,
@@ -55,4 +55,4 @@ const PlaygroundClient = () => {
   );
 };
 
-export default PlaygroundClient;
+export default TinkerClient;

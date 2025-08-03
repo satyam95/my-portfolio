@@ -11,13 +11,6 @@ import MiniProjectCard from "@/components/MiniProjectCard";
 import { miniprojects } from "@/data/minprojects";
 import { blogs } from "@/data/blog";
 import BlogCard from "@/components/BlogCard";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Satyam Sagar",
-  description:
-    "Portfolio of Satyam Sagar, Frontend Developer and UI Engineer. Explore my projects, work experience, skills, and articles on web development and UI design.",
-};
 
 export default function Home() {
   return (
@@ -36,10 +29,10 @@ export default function Home() {
             </div>
             <div className="h-25 md:h-[127px] w-25 md:w-[127px] rounded-full bg-[#e6e6e64f] hover:scale-80 transition-transform duration-500 cursor-pointer">
               <Link
-                href="mailto:satyamsagar30@gmail.com"
+                href="https://dub.sh/satyam_cv"
                 target="_blank"
                 className="h-full w-full flex justify-center items-center"
-                aria-label="Download Resume PDF"
+                aria-label="Download or View Resume PDF"
               >
                 <File size={40} />
               </Link>
@@ -70,18 +63,27 @@ export default function Home() {
               Hello, I’m Satyam, a Frontend Developer and UI Engineer.
             </h1>
             <p className="text-lg md:text-xl text-[#404040]">
-              At the heart of my work is a commitment in mergin design,
-              community and business together. I have worked with top companies
-              such as Google, Figma, DaoHQ, Redxam and many others.
+              I craft scalable, accessible, high-performance interfaces using
+              React, Next.js, and UI systems—focusing on architecture, reusable
+              components, Design System, and cross-device experiences.
             </p>
           </div>
-          <Link
-            href="mailto:satyamsagar30@gmail.com"
-            className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit shadow-lg/30 md:shadow-xl/30"
-            aria-label="Say Hi to Satyam Sagar via email"
-          >
-            Say Hi 👋
-          </Link>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+            <Link
+              href="#"
+              className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit  shadow-lg/30 md:shadow-xl/30"
+              aria-label="Say Hi to Satyam Sagar via email"
+            >
+              Book a Call 👋
+            </Link>
+            <Link
+              href="#"
+              className="bg-[rgb(210,235,205)] py-3 px-6 rounded-full text-base leading-[18px] text-[rgb(0,60,0)] font-semibold flex items-center gap-2.5 max-w-fit shadow-[rgba(23,141,0,0.4)] shadow-lg/30 md:shadow-xl/30"
+            >
+              <span className="w-2 h-2 bg-[rgb(0,60,0)] rounded-full" />
+              Available for new project
+            </Link>
+          </div>
         </div>
       </div>
       <div className="py-16 md:py-20 px-4 md:px-8 lg:px-0">
@@ -115,9 +117,7 @@ export default function Home() {
       <div className="border-[#2222220d] border-t py-16 md:py-20 px-4 md:px-8">
         <div className="flex flex-col md:flex-row gap-10 w-full">
           <div className="flex flex-col gap-5 md:w-1/2">
-            <p className="text-[#555] text-base font-medium">
-              Work Experience
-            </p>
+            <p className="text-[#555] text-base font-medium">Work Experience</p>
             <div className="flex flex-col gap-6">
               {experiences.map((experience) => (
                 <ExperienceCard
@@ -150,9 +150,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex flex-col gap-5 md:w-1/2">
-            <p className="text-[#555] text-base font-medium">
-              Mini Projects
-            </p>
+            <p className="text-[#555] text-base font-medium">Mini Projects</p>
             {miniprojects.map((project) => (
               <MiniProjectCard
                 key={project.title}
