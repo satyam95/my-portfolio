@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { File, Linkedin, Github } from "lucide-react";
 import { Link } from "next-view-transitions";
@@ -11,6 +12,13 @@ import MiniProjectCard from "@/components/MiniProjectCard";
 import { miniprojects } from "@/data/minprojects";
 import { blogs } from "@/data/blog";
 import BlogCard from "@/components/BlogCard";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "My Blog",
+    description: "Read the latest posts on My Blog, powered by Next.js 15.",
+  };
+}
 
 export default function Home() {
   return (
