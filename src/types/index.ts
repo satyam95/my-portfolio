@@ -8,7 +8,14 @@ export interface ExternalLink {
   link: string;
 }
 
+export interface SEO {
+  title: string;
+  description: string;
+  keywords: string[];
+}
+
 export interface Project {
+  seo: SEO;
   slug: string;
   title: string;
   description: string;

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { projects } from "@/data/projects";
 import { Project } from "@/types";
 import Image from "next/image";
@@ -5,6 +6,29 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type Params = Promise<{ slug: string }>;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project: Project | undefined = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found | Satyam Sagar",
+      description:
+        "The project you're looking for does not exist on Satyam Sagar's portfolio.",
+    };
+  }
+
+  return {
+    title: `${project.seo.title}`,
+    description: project.seo.description,
+    keywords: project.seo.keywords || [],
+  };
+}
 
 export default async function SingleProjectPage({
   params,

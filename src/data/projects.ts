@@ -2,6 +2,22 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    seo: {
+      title: "InvoiceGen – Simple Invoice Management Web App",
+      description:
+        "A Next.js and TypeScript web app to create, manage, and track invoices easily. Built with Tailwind CSS, Drizzle ORM, and PostgreSQL.",
+      keywords: [
+        "invoice app",
+        "Next.js project",
+        "TypeScript web app",
+        "freelance tools",
+        "frontend developer",
+        "UI developer",
+        "UI engineer",
+        "Drizzle ORM",
+        "PostgreSQL",
+      ],
+    },
     slug: "invoice-generator",
     title: "InvoiceGen: Create and Manage Invoices Easily",
     image: "/invoice/invoice_main.jpg",
@@ -43,6 +59,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    seo: {
+      title: "Donut UI - React Component Library",
+      description:
+        "A modular, customizable, and accessible React component library built with Tailwind CSS, TypeScript, and Storybook.",
+      keywords: [
+        "React component library",
+        "UI library",
+        "UI developer",
+        "UI engineer",
+        "Tailwind CSS components",
+        "TypeScript",
+        "Storybook",
+        "frontend developer",
+      ],
+    },
     slug: "donut-component-library",
     title: "Donut UI: React Component Library",
     image: "/donut/donut_main.jpg",
@@ -102,6 +133,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    seo: {
+      title: "Store - Next.js E-commerce Platform",
+      description:
+        "A Next.js e-commerce platform integrated with WordPress for content and product management using GraphQL and WooGraphQL.",
+      keywords: [
+        "Next.js ecommerce",
+        "React ecommerce",
+        "frontend developer",
+        "UI developer",
+        "UI engineer",
+        "WordPress GraphQL",
+        "WooGraphQL",
+        "TypeScript projects",
+      ],
+    },
     slug: "wp-ecom",
     title: "Store: Next.js Ecommerce using Wordpress as Backend",
     image: "/ecom/ecom_main.jpg",
@@ -151,6 +197,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    seo: {
+      title: "Stock - Product Inventory Web App",
+      description:
+        "A Next.js inventory management web app using Tailwind CSS, Shadcn, Express.js, Prisma, and PostgreSQL.",
+      keywords: [
+        "inventory app",
+        "Next.js project",
+        "frontend developer",
+        "UI developer",
+        "UI engineer",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Express.js",
+      ],
+    },
     slug: "stock-inventory-management",
     title: "Stock: Inventory Management System",
     image: "/stock/stock_main.jpg",
@@ -200,6 +261,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    seo: {
+      title: "Brainly – Link Sharing Web App",
+      description:
+        "A React and Next.js web app for sharing links using Tailwind CSS, Shadcn, Express.js, Prisma, and MongoDB.",
+      keywords: [
+        "link sharing app",
+        "React project",
+        "frontend developer",
+        "UI developer",
+        "UI engineer",
+        "Prisma ORM",
+        "MongoDB",
+        "Express.js",
+      ],
+    },
     slug: "brainly",
     title: "Brainly: Link sharing tool",
     image: "/brain/brain_main.jpg",
@@ -245,6 +321,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    seo: {
+      title: "Laundry – Mobile Laundry Ordering App",
+      description:
+        "A React Native app using Expo, Firebase, and Redux Toolkit for seamless laundry service ordering.",
+      keywords: [
+        "React Native project",
+        "mobile app",
+        "frontend developer",
+        "UI developer",
+        "UI engineer",
+        "Expo",
+        "Firebase",
+        "Redux Toolkit",
+      ],
+    },
     slug: "laundry-app",
     title: "Laundry: React Native Expo App",
     image: "/laundry/1.png",
@@ -274,6 +365,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    seo: {
+      title: "Food Delivery – Web Ordering App",
+      description:
+        "A Next.js web app for seamless food ordering built with Tailwind CSS, TypeScript, and Jest testing.",
+      keywords: [
+        "food delivery app",
+        "Next.js project",
+        "frontend developer",
+        "UI developer",
+        "UI engineer",
+        "TypeScript",
+        "Tailwind CSS",
+        "Jest testing",
+      ],
+    },
     slug: "food-delivery-web-app",
     title: "Food Delivery Web App",
     image: "/fd/fd_main.jpg",

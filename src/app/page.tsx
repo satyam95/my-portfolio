@@ -13,12 +13,25 @@ import { miniprojects } from "@/data/minprojects";
 import { blogs } from "@/data/blog";
 import BlogCard from "@/components/BlogCard";
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "My Blog",
-    description: "Read the latest posts on My Blog, powered by Next.js 15.",
-  };
+export const metadata: Metadata = {
+  title: "Frontend & UI Developer | Freelance Web Developer",
+  description:
+    "Portfolio of Satyam Sagar - Frontend Developer, UI Engineer, and Freelance Web Developer building websites, MVPs, and Figma to Code projects with Next.js, React, and Tailwind CSS.",
+  keywords: [
+    "frontend developer",
+    "UI developer",
+    "UI engineer",
+    "freelance developer",
+    "React developer",
+    "Next.js portfolio",
+    "web developer for hire",
+    "MVP development",
+    "Figma to code",
+    "Tailwind CSS",
+    "TypeScript projects"
+  ]
 }
+
 
 export default function Home() {
   return (
@@ -26,13 +39,13 @@ export default function Home() {
       <div className="py-6 px-4 md:px-8 lg:px-0">
         <div className="flex flex-col gap-8">
           <div className="flex gap-2 items-center">
-            <div className="relative h-25 md:h-[127px] w-25 md:w-[127px]">
+            <div className="relative">
               <Image
-                src="/sample-pic.jpeg"
+                src="/satyam.jpeg"
                 alt="profile picture"
-                fill
-                className="rounded-full object-cover"
-                sizes="(max-width: 768px) 100px, 127px"
+                width={150}
+                height={150}
+                className="rounded-full"
               />
             </div>
             <div className="h-25 md:h-[127px] w-25 md:w-[127px] rounded-full bg-[#e6e6e64f] hover:scale-80 transition-transform duration-500 cursor-pointer">
@@ -78,14 +91,14 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
             <Link
-              href="#"
+              href="https://cal.com/satyam95/15min"
               className="bg-black py-3 px-6 rounded-3xl text-white font-semibold text-base leading-[18px] max-w-fit  shadow-lg/30 md:shadow-xl/30"
               aria-label="Say Hi to Satyam Sagar via email"
             >
               Book a Call 👋
             </Link>
             <Link
-              href="#"
+              href="https://cal.com/satyam95/30min"
               className="bg-[rgb(210,235,205)] py-3 px-6 rounded-full text-base leading-[18px] text-[rgb(0,60,0)] font-semibold flex items-center gap-2.5 max-w-fit shadow-[rgba(23,141,0,0.4)] shadow-lg/30 md:shadow-xl/30"
             >
               <span className="w-2 h-2 bg-[rgb(0,60,0)] rounded-full" />
